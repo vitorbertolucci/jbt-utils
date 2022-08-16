@@ -5,8 +5,6 @@ import TimeoutError from '../errors/TimeoutError';
 
 export type HttpFetchResponseType = 'json' | 'text' | 'buffer' | null;
 
-export { RequestInit } from 'node-fetch';
-
 interface IDefaultOptions extends RequestInit {
   timeout: number;
   response_type: HttpFetchResponseType;
