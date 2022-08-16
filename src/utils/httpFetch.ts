@@ -3,11 +3,13 @@ import AbortController from 'abort-controller';
 
 import TimeoutError from '../errors/TimeoutError';
 
-type ResponseType = 'json' | 'text' | 'buffer' | null;
+export type HttpFetchResponseType = 'json' | 'text' | 'buffer' | null;
+
+export { RequestInit } from 'node-fetch';
 
 interface IDefaultOptions extends RequestInit {
   timeout: number;
-  response_type: ResponseType;
+  response_type: HttpFetchResponseType;
 }
 
 const defaultOptions: IDefaultOptions = {
