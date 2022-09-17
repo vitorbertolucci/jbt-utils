@@ -11,7 +11,7 @@ interface IDefaultOptions extends RequestInit {
 }
 
 const defaultOptions: IDefaultOptions = {
-  timeout: 5000,
+  timeout: 60000,
   response_type: 'json',
 };
 
