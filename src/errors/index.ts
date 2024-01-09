@@ -1,1 +1,1 @@
-export { default as TimeoutError } from './TimeoutError';
+export { TimeoutError } from './TimeoutError.js';

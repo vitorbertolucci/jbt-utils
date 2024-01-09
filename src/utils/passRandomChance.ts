@@ -1,4 +1,4 @@
-import getRandomInteger from './getRandomInteger';
+import getRandomInteger from './getRandomInteger.js';
 
 export default function passRandomChance(chance: number): boolean {
   const normalizedChance = Math.min(Math.max(chance, 0), 100);

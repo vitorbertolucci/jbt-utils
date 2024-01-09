@@ -1,7 +1,7 @@
 import fetch, { RequestInit } from 'node-fetch';
-import AbortController from 'abort-controller';
+import { AbortController } from 'abort-controller';
 
-import TimeoutError from '../errors/TimeoutError';
+import { TimeoutError } from '../errors/TimeoutError.js';
 
 export type HttpFetchResponseType = 'json' | 'text' | 'buffer' | null;
 

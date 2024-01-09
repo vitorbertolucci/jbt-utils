@@ -1,4 +1,4 @@
-export default class TimeoutError {
+export class TimeoutError {
   public readonly message: string;
 
   constructor(message: string) {
