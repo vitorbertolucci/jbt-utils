@@ -37,24 +37,26 @@ export default async function httpFetch(
 
     clearTimeout(abortTimeout);
 
-    if (response_type) {
-      if (response_type === 'json') {
-        const jsonResponse = await response.json();
+    if (!response_type) {
+      return response;
+    }
 
-        return jsonResponse;
-      }
-      if (response_type === 'buffer') {
-        const bufferResponse = await response.buffer();
+    if (response_type === 'buffer') {
+      const bufferResponse = await response.buffer();
 
-        return bufferResponse;
-      }
+      return bufferResponse;
+    }
 
+    if (response_type === 'text') {
       const textResponse = await response.text();
 
       return textResponse;
     }
 
-    return response;
+    // Default is response_type is "json"
+    const jsonResponse = await response.json();
+
+    return jsonResponse;
   } catch (error) {
     clearTimeout(abortTimeout);
 
